@@ -17,10 +17,12 @@ Cette Class functionne avec un enum `SignalEvent` qui regroupe les différents s
 
 ###### Connecter un Signal
 * connection simple.
+
 ```Javascript
 UnitySignal.connect( maFunction, SignalEvent.CHANNEL, gameObject );
 ```
 * connection sur un channel particilier.
+
 ```Javascript
 UnitySignal.connect( maFunction, SignalEvent.CHANNEL, "monChannel" );
 ```
@@ -32,18 +34,22 @@ UnitySignal.disconnect( maFunction, SignalEvent.CHANNEL );
 
 ###### Emettre un Signal
 * Signal avec un paramètre.
+
 ```Javascript
 UnitySignal.emit( SignalEvent.CHANNEL, param );
 ```
 * Signal avec un paramètre sur un channel ( seul les signaux connecté avec ce __channel__ seront exécuté ).
+
 ```Javascript
 UnitySignal.emit( SignalEvent.CHANNEL, "monChannel", param );
 ```
 * Signal sans paramètre.
+
 ```Javascript
 UnitySignal.emit( SignalEvent.CHANNEL );
 ```
 * Signal sans paramètre sur un channel ( seul les signaux connecté avec ce __channel__ seront exécuté ).
+
 ```Javascript
 UnitySignal.emit( SignalEvent.CHANNEL, "monChannel" );
 ```
