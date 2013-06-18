@@ -1,0 +1,19 @@
+//Write our Event
+public enum SignalEvent{
+	START,
+	OPEN_HELP,
+	
+	TIMER_PLAY,
+	
+	LOCK_USER,
+	PAUSE_USER,
+
+	DRAW_POPUP,
+
+	LAUCH_CINEMATIQUE,
+
+	END_GAME,
+	END_TUTO,
+
+	SET_CONFIG,
+}
