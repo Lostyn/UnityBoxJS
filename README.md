@@ -15,23 +15,23 @@ Habitué à utiliser ce type de signal en As3 j'ai voulu le porter en Javascript
 
 Cette Class functionne avec un enum `SignalEvent` qui regroupe les différents signaux.
 
-1. Connecter un Signal
-* connection simple
+###### Connecter un Signal
+* connection simple.
 ```Javascript
 UnitySignal.connect( maFunction, SignalEvent.CHANNEL, gameObject );
 ```
-* connection sur un channel particilier
+* connection sur un channel particilier.
 ```Javascript
 UnitySignal.connect( maFunction, SignalEvent.CHANNEL, "monChannel" );
 ```
 
-2. Déconnecter un Signal
+###### Déconnecter un Signal
 ```Javascript
 UnitySignal.disconnect( maFunction, SignalEvent.CHANNEL );
 ```
 
-3. Emettre un Signal
-* Signal avec un paramètre
+###### Emettre un Signal
+* Signal avec un paramètre.
 ```Javascript
 UnitySignal.emit( SignalEvent.CHANNEL, param );
 ```
@@ -39,7 +39,7 @@ UnitySignal.emit( SignalEvent.CHANNEL, param );
 ```Javascript
 UnitySignal.emit( SignalEvent.CHANNEL, "monChannel", param );
 ```
-* Signal sans paramètre
+* Signal sans paramètre.
 ```Javascript
 UnitySignal.emit( SignalEvent.CHANNEL );
 ```
@@ -47,3 +47,25 @@ UnitySignal.emit( SignalEvent.CHANNEL );
 ```Javascript
 UnitySignal.emit( SignalEvent.CHANNEL, "monChannel" );
 ```
+
+
+### SkyConsole
+=====
+Il s'agit d'une console visible en jeu touche `F9`. Qui permet d'afficher des informations comme un `print` classique. Il est aussi possible d'y enregistrer des function executable à tous moment. ( Une autoCompletion d'aide est disponible sur la syntax des functions enregistré ).
+
+Cette Class est un singleton.
+
+###### Affiche un message dans la console
+```Javascript
+SkyConsole.Log( "coucou depuis n'importe où" );
+```
+##### Enregistrement d'une function
+```Javascript
+SkyConsole.RegisterCommand( 'functionKey', maFunction, 'Une drecription de la function' );
+```
+
+###### Lancer une function
+Pour executer une function il suffit d'entrer la functionKey dans la console `functionKey param`.
+Deux function sont déjà implémenté dans *Sky*
+* clear - Efface le contenu de la console
+* help - list l'ensemble des functions enregistré et affiche leur description
