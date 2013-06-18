@@ -65,7 +65,7 @@ Cette Class est un singleton.
 ```Javascript
 SkyConsole.Log( "coucou depuis n'importe où" );
 ```
-##### Enregistrement d'une function
+###### Enregistrement d'une function
 ```Javascript
 SkyConsole.RegisterCommand( 'functionKey', maFunction, 'Une drecription de la function' );
 ```
