@@ -84,7 +84,7 @@ public class SkyConsole extends MonoBehaviour {
 			* @return
 			*/
 			public static function Log( s:String ){
-				getInstance( ).log( s );
+				getInstance( ).view.log( s );
 			}
 
 			/**
