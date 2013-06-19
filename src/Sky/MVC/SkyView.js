@@ -109,7 +109,8 @@ public class SkyView extends MonoBehaviour {
 			  	
 			  		scrollPosition = GUILayout.BeginScrollView (
 			            					scrollPosition, GUILayout.Width ( rectView.width ), GUILayout.Height ( rectView.height - 30 ) );
-			        	
+			        scrollPosition.y = Mathf.Infinity;
+			        
 			        GUILayout.Label( consoleString );
 
 			        
