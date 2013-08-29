@@ -84,7 +84,7 @@ Il suffit d'ajouter StateManager à la scène pour avoir un exemple fonctionnel.
 
 L'ajout de state ce fait dans un `enum State`
 Il suffit ensuite d'enregistrer la state avec une `List<StateProcess>`
-Javascript
+
 ```Javascript
 var sSt : List.<StateProcess> = new List.<StateProcess>( );
   sSt.Add( stateIntro );
