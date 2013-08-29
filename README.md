@@ -8,6 +8,7 @@ _UnityBoxJS est un ensemble de function utile pour unity3D en javascript._
 ##### Actuellement implémenté : 
 * UnitySignal 	- Pattern Signal ( alternative aux `SendMessage( )` )
 * SkyConsole 	- Console  
+* StateManager  - FrontController pattern
 
 ### UnitySignal
 =====
@@ -75,3 +76,17 @@ Pour executer une function il suffit d'entrer la functionKey dans la console `fu
 Deux function sont déjà implémenté dans *Sky*
 * clear - Efface le contenu de la console
 * help - list l'ensemble des functions enregistré et affiche leur description
+
+### StateManager
+===== 
+Les dossier JS et C# contienne l'ensemble des scripts utile.
+Il suffit d'ajouter StateManager à la scène pour avoir un exemple fonctionnel.
+
+L'ajout de state ce fait dans un `enum State`
+Il suffit ensuite d'enregistrer la state avec une `List<StateProcess>`
+Javascript
+```Javascript
+var sSt : List.<StateProcess> = new List.<StateProcess>( );
+  sSt.Add( stateIntro );
+registerState( State.MA_STATE, sSt );
+```
